@@ -1,0 +1,9 @@
+POST http://localhost:3000/api/services
+Content-Type: application/json
+
+{
+    "name": "Serviço",
+    "description": "Alguma descrição",
+    "price": 1400,
+    "image": "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpng.pngtree.com%2Fback_origin_pic%2F04%2F06%2F56%2Fc16a17e4484e1bdf02d1d83fdc19461c.jpg&f=1&nofb=1&ipt=fb851f6fcfd05fb0e4d635b3b3d32c1c55b42f5bbd1d03618159398eda0a8c78&ipo=images"
+}
