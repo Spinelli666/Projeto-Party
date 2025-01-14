@@ -35,12 +35,35 @@ const serviceController = {
             const id = req.params.id
             const service = await ServiceModel.findById(id)
 
+            if(!service) {
+                res.status(404).json({msg: "Serviço não encontrado!"})
+                return
+            }
+
             res.json(service)
 
         } catch (error) {
             console.log(error)
         }
-    }
+    },
+    delete: async(req, res) => {
+        try {
+            const id = req.params.id
+            const response = await ServiceModel.findById(id)
+
+            if(!service) {
+                res.status(404).json({msg: "Serviço não encontrado!"})
+                return
+            }
+
+            const deletedService = await ServiceModel.findByIdAndDelete(id)
+
+            res.status(200).json({deletedService, msg: "Serviço deletado com sucesso!"})
+
+        } catch (error) {
+            console.log(error)
+        }
+    },
 }
 
 module.exports = serviceController;
