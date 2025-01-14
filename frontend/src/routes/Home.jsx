@@ -4,6 +4,8 @@ import { useState, useEffect } from "react"
 
 import { Link } from "react-router-dom"
 
+import './Home.css'
+
 const Home = () => {
 
     const [parties, setParties] = useState(null)
@@ -25,7 +27,7 @@ const Home = () => {
     if(!parties) return <p>Carregando...</p>
 
   return (
-    <div className="Home">
+    <div className="home">
       <h1>Suas Festas</h1>
       <div className="parties-container">
         {parties.lenght === 0 && <p>Você ainda não tem festas</p>}
